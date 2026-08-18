@@ -21,10 +21,21 @@
 # print(result.text)
 
 
-import whisper
+# import whisper
 
 # Cargar modelo large-v3 (mejor para español)
-model = whisper.load_model("large-v3")
+# model = whisper.load_model("large-v3", device="cpu")
+import torch
+import whisper
+
+if torch.cuda.is_available():
+    device = "cuda"
+    model_name = "turbo"
+else:
+    device = "cpu"
+    model_name = "large-v3"
+
+model = whisper.load_model(model_name, device=device)
 
 # Transcribir directamente (¡automático todo!)
 result = model.transcribe("unidad5parte1.mp3", language="es")

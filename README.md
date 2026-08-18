@@ -20,3 +20,12 @@ https://github.com/openai/whisper#:~:text=pip%20install%20setuptools%2Drust
 ver luego:
 https://github.com/jhdeov/whisper-to-textgrid-batch/
 https://github.com/benmaster82/writher
+
+de http a ssh para push:
+```sh
+
+git remote set-url origin git@github.com:pacodan/transcripcion.git
+```
+
+```~~ 
+```
