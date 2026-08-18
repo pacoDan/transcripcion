@@ -33,7 +33,8 @@ if torch.cuda.is_available():
     model_name = "turbo"
 else:
     device = "cpu"
-    model_name = "large-v3"
+    model_name = "tiny"
+    # model_name = "large-v3"
 
 model = whisper.load_model(model_name, device=device)
 
