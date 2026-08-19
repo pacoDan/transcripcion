@@ -4,6 +4,7 @@ conda create -n whisper
 conda activate whisper
 conda install pip -y
 pip install -U openai-whisper
+conda install -c conda-forge ffmpeg
 ```
 sino primero antes:
 ```sh
