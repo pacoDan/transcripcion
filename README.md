@@ -4,7 +4,6 @@ conda create -n whisper
 conda activate whisper
 conda install pip -y
 pip install -U openai-whisper
-conda install -c conda-forge ffmpeg
 ```
 sino primero antes:
 ```sh
@@ -17,7 +16,10 @@ para borrar el entorno y las dependencias:
 ```sh
 conda remove --name whisper --all -y # Eliminar el entorno y sus paquetes asociados
 conda clean --all -y # Limpiar el caché de Conda (Crucial para recuperar espacio)
-
+```
+se debe tener ffmpeg: (esto fallo en la mini pc ryzen por alguna razon)
+```sh
+conda install -c conda-forge ffmpeg
 ```
 https://github.com/openai/whisper#:~:text=pip%20install%20setuptools%2Drust
 
@@ -29,7 +31,4 @@ de http a ssh para push:
 ```sh
 
 git remote set-url origin git@github.com:pacodan/transcripcion.git
-```
-
-```~~ 
 ```
