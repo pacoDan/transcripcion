@@ -1,6 +1,6 @@
 install en linux
 ```sh
-conda create -n whisper -y
+conda create -n whisper
 conda activate whisper
 conda install pip -y
 pip install -U openai-whisper
@@ -8,6 +8,9 @@ pip install -U openai-whisper
 sino primero antes:
 ```sh
 conda config --set always_yes true
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
+conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/msys2
 ```
 para borrar el entorno y las dependencias:
 ```sh
